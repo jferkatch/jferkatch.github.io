@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract & Agreement Tracker - In Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #0f1629 50%, #1a1f3a 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(251, 191, 36, 0.1);
+            border: 2px solid rgba(251, 191, 36, 0.3);
+            border-radius: 30px;
+            color: #fbbf24;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 3rem;
+        }
+
+        .status-badge::before {
+            content: '⚡';
+            font-size: 1.5rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+
+        .icon {
+            font-size: 8rem;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 30px rgba(251, 191, 36, 0.3));
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .description {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .features-box {
+            background: rgba(17, 22, 51, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .features-box h2 {
+            font-size: 1.5rem;
+            color: #00d4ff;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .features-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-item::before {
+            content: '✓';
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: rgba(0, 212, 255, 0.1);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00d4ff;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .feature-item {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .note {
+            background: rgba(251, 191, 36, 0.05);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .note-title {
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .note-text {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .back-button::before {
+            content: '←';
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .icon {
+                font-size: 5rem;
+            }
+
+            .description {
+                font-size: 1.1rem;
+            }
+
+            .features-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status-badge">In Development</div>
+        
+        <div class="icon">📄</div>
+        
+        <h1>Contract & Agreement Tracker</h1>
+        
+        <p class="description">
+            A comprehensive contract management system is currently being developed for this portfolio. 
+            This application will centralize contract lifecycle management from creation to expiration.
+        </p>
+
+        <div class="features-box">
+            <h2>Planned Features</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    Contract repository with advanced search and filtering
+                </div>
+                <div class="feature-item">
+                    Automated renewal alerts and expiration notifications
+                </div>
+                <div class="feature-item">
+                    Obligation tracking and compliance monitoring
+                </div>
+                <div class="feature-item">
+                    Document version control and audit trails
+                </div>
+                <div class="feature-item">
+                    Stakeholder management and approval workflows
+                </div>
+                <div class="feature-item">
+                    Risk assessment and vendor performance integration
+                </div>
+                <div class="feature-item">
+                    Financial tracking and budget impact analysis
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <div class="note-title">Note to Recruiters:</div>
+            <div class="note-text">
+                This project demonstrates contract management system design thinking and planning. 
+                The working prototype will include renewal workflows, compliance tracking, and analytics 
+                dashboards for contract portfolio management.
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Portfolio</a>
+    </div>
+</body>
+</html>
